@@ -15,6 +15,8 @@ python -m pytest -v --html=report.html --self-contained-html
 
 The expected defect test is marked strict xfail. An XPASS signals that its mark should be reviewed. Test results depend on the shared service and may change. See RESULTS.md for observations.
 
+To repeat the Step A2 `curl` observations, run `python curl_checks.py`. It creates a fictional user and uses a temporary cookie jar and authorization header; it does not create ratings.
+
 ## Input domain for POST /api/ratings
 
 Each non-base case changes one characteristic while keeping the others at the base. `test_base_choice_is_saved` covers all base blocks. The resulting base choice suite has nine cases.
